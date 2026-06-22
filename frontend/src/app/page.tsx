@@ -16,6 +16,7 @@ import { ContactPage } from "../components/ContactPage";
 import { WaitlistModal } from "../components/WaitlistModal";
 import { DecodingAlgorithmPage } from "../components/DecodingAlgorithmPage";
 import { LiveSignups } from "../components/LiveSignups";
+import { CountdownTimer } from "../components/CountdownTimer";
 
 export default function Home() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
@@ -179,6 +180,7 @@ export default function Home() {
       />
 
       {/* Live Recent Signups Notification */}
+      <CountdownTimer />
       <LiveSignups />
     </div>
   );
