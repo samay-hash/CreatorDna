@@ -21,23 +21,21 @@ export function CountdownTimer() {
     
     window.addEventListener("scroll", handleScroll);
 
-    // Set a target date: 15 days from exactly now (or hardcode a specific date like new Date("2026-07-07T00:00:00"))
-    // To make it consistently 15 days for demo, we'll store the target date in sessionStorage or just start at 15 days
-    let targetDate = sessionStorage.getItem("launchTargetDate");
+    // To make it consistently 15 days, we store the target date in localStorage so it doesn't reset on refresh
+    let targetDate = localStorage.getItem("launchTargetDate");
     if (!targetDate) {
       targetDate = new Date(new Date().getTime() + 15 * 24 * 60 * 60 * 1000).toISOString();
-      sessionStorage.setItem("launchTargetDate", targetDate);
+      localStorage.setItem("launchTargetDate", targetDate);
     }
     
     const targetTime = new Date(targetDate).getTime();
 
-    const interval = setInterval(() => {
+    const updateCountdown = () => {
       const now = new Date().getTime();
       const distance = targetTime - now;
 
       if (distance < 0) {
-        clearInterval(interval);
-        return;
+        return true; // Should clear interval
       }
 
       setTimeLeft({
@@ -46,6 +44,16 @@ export function CountdownTimer() {
         minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
         seconds: Math.floor((distance % (1000 * 60)) / 1000)
       });
+      return false;
+    };
+
+    // Call immediately to avoid 1-second delay flash
+    if (updateCountdown()) return;
+
+    const interval = setInterval(() => {
+      if (updateCountdown()) {
+        clearInterval(interval);
+      }
     }, 1000);
 
     return () => {
