@@ -7,17 +7,29 @@
 .container {
   min-height: 100vh;
   width: 100vw;
-  background-image: url('/hero-bg-modern.png');
-  background-size: cover;
-  background-position: center bottom;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  /* Background image moved to next/image for preload & optimization */
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #1E293B;
   font-family: var(--font-inter);
   padding-top: 140px; /* Pushed down to clear the tall navbar */
+}
+
+/* --- BACKGROUND IMAGE OPTIMIZATION --- */
+.bgWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center bottom;
 }
 
 /* --- NAVBAR --- */

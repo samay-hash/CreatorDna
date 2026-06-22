@@ -36,6 +36,18 @@ export default function Home() {
 
   return (
     <div className={styles.wrapper}>
+      {/* --- OPTIMIZED BACKGROUND IMAGE --- */}
+      <div className={styles.bgWrapper}>
+        <Image
+          src="/hero-bg-modern.png"
+          alt="Creator DNA Background"
+          fill
+          priority
+          quality={100}
+          className={styles.bgImage}
+        />
+      </div>
+
       {/* --- TOP NAVBAR WITH DOTTED LINE --- */}
       <header className={`${styles.navbar} ${styles.animBase} ${styles.animDown} ${styles.delay1}`}>
         <div className={styles.navLogo}>
