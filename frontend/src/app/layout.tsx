@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   description: "The complete intelligence platform for YouTube creators. Decode algorithms, trace viral patterns, detect trends, and secure views in real time.",
 };
 
+import { MobileBlocker } from "../components/MobileBlocker";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,7 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${michroma.variable}`}>
-      <body>{children}</body>
+      <body>
+        <MobileBlocker />
+        {children}
+      </body>
     </html>
   );
 }
