@@ -1,9 +1,6 @@
 <div align="center">
   <img src="readmeeeee.png" alt="Creator DNA Hero" width="100%" style="border-radius: 12px; margin-bottom: 20px;" />
-  
   <br />
-  
-  <h1>🧬 Creator DNA</h1>
   <h3>The Complete Creators Intelligence Platform for YouTube</h3>
 
   <p align="center">
