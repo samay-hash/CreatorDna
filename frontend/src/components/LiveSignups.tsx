@@ -19,7 +19,7 @@ export function LiveSignups() {
           setNames(data);
         }
       })
-      .catch(err => console.error("Failed to fetch recent signups", err));
+      .catch(() => {});
   }, []);
 
   useEffect(() => {

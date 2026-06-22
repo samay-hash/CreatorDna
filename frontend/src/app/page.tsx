@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import bgImage from "../assets/hero-bg-modern.png";
 import styles from "./page.module.css";
 import landStyles from "./landing.module.css";
 import { Search, ShieldCheck, ArrowRight, Play, Sparkles, Dna, LineChart, CheckCircle2, X, MinusCircle, Star, Target, Feather, Radar, Scan, TrendingUp, Ban, ArrowUpRight, Sun, Moon } from "lucide-react";
@@ -31,7 +32,7 @@ export default function Home() {
           setWaitlistCount(data.count);
         }
       })
-      .catch(err => console.error("Could not fetch waitlist count:", err));
+      .catch(() => {});
   }, []);
 
   return (
@@ -39,11 +40,11 @@ export default function Home() {
       {/* --- OPTIMIZED BACKGROUND IMAGE --- */}
       <div className={styles.bgWrapper}>
         <Image
-          src="/hero-bg-modern.png"
+          src={bgImage}
           alt="Creator DNA Background"
           fill
           priority
-          quality={100}
+          placeholder="blur"
           className={styles.bgImage}
         />
       </div>
