@@ -1,0 +1,273 @@
+.adminContainer {
+  min-height: 100vh;
+  background: #0f172a;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: var(--font-inter), sans-serif;
+  background-image: radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.15) 0%, transparent 50%);
+}
+
+.loginBox {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(20px);
+  padding: 3rem;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.loginHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-family: var(--font-michroma), sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.button:hover:not(:disabled) {
+  background: #6d28d9;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 0.9rem;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Dashboard Styles */
+.dashboard {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 80vh;
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dashHeader {
+  padding: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.4);
+}
+
+.dashHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.dashHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.statBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logoutBtn:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.tableContainer {
+  padding: 2rem;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+
+.table th {
+  text-align: left;
+  padding: 1rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table td {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  transition: background 0.2s;
+}
+
+.table tr td:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-left: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.table tr td:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.table tr:hover td {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.uuidCell {
+  font-family: monospace;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.emailCell {
+  font-weight: 500;
+  color: #f8fafc;
+}
+
+.statusBadge {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  text-transform: capitalize;
+}
+
+.dateCell {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.deleteBtn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.deleteBtn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  gap: 1rem;
+  color: #64748b;
+  font-size: 1.1rem;
+}

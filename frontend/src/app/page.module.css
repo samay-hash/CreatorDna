@@ -1,0 +1,317 @@
+.wrapper {
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('/hero-bg-modern.png');
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1E293B;
+  font-family: var(--font-inter);
+  padding-top: 140px; /* Pushed down to clear the tall navbar */
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px; /* Moved up from 100px so dotted line is higher */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  border-bottom: none;
+  z-index: 50;
+}
+
+.navLogo {
+  font-family: var(--font-michroma);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: #0f172a; /* Deeper premium slate */
+  text-shadow: 0 4px 15px rgba(99, 102, 241, 0.3); /* Premium subtle glow */
+  position: relative;
+  display: inline-block;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  font-family: var(--font-inter);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0f172a; /* Matched CREATOR DNA logo color */
+  letter-spacing: 0.15em;
+}
+
+.navSeparator {
+  color: rgba(15, 23, 42, 0.3); /* Matches the same hue, just faded */
+  font-weight: 400;
+}
+
+.navLink {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.navLink:hover {
+  color: #7c3aed;
+}
+
+.navAuth {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  font-family: var(--font-inter);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.signInBtn {
+  color: #0f172a; /* Matched CREATOR DNA logo color */
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.signInBtn:hover {
+  color: #7c3aed;
+}
+
+.signUpBtn {
+  color: #7c3aed; /* Permanent purple */
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600; /* Made it slightly bolder to stand out */
+}
+.signUpBtn:hover {
+  opacity: 0.8; /* Subtle hover effect instead of color change */
+}
+
+
+.logo {
+  font-family: var(--font-michroma);
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1E293B;
+}
+
+.poweredByPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.25); /* Clearer glass background */
+  border: 1px solid rgba(255, 255, 255, 0.6); /* Sharper white border */
+  border-radius: 12px; /* Slightly smaller border radius */
+  height: 36px;
+  padding: 0 1.25rem; /* Tighter padding */
+  font-size: 0.75rem; /* Smaller font */
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(20px) saturate(120%);
+  margin-bottom: 2.5rem;
+  color: #0f172a; /* Matched dark slate */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08); /* Clean shadow */
+}
+
+.iconYoutube {
+  color: #8b5cf6; /* Original sleek purple */
+}
+
+.iconGemini {
+  color: #f97316; /* Original sleek orange */
+}
+
+.headline {
+  font-family: var(--font-michroma);
+  font-size: clamp(32px, 4vw, 60px); /* Slightly reduced size */
+  line-height: 1.05; /* Tighter line height */
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem; /* Pulled up closer to subheadline */
+  max-width: 1200px;
+  color: #1E293B;
+  text-transform: uppercase;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.08));
+}
+
+/* Sci-fi text cuts */
+.cut1 {
+  background: linear-gradient(-45deg, transparent 15%, #1E293B 16%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding-right: 2px;
+}
+
+.cut2 {
+  background: linear-gradient(-45deg, #1E293B 15%, transparent 16%, transparent 20%, #1E293B 21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding-right: 2px;
+}
+
+.cut3 {
+  background: linear-gradient(-45deg, #1E293B 15%, transparent 16%, transparent 18%, #8b5cf6 19%, #8b5cf6 25%, transparent 26%, transparent 28%, #1E293B 29%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding-right: 2px;
+}
+
+.subheadline {
+  font-family: var(--font-inter);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  color: rgba(30, 41, 59, 0.75);
+  max-width: 600px;
+  margin-bottom: 2rem; /* Pulled button up */
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  justify-content: center;
+  margin-top: 0; /* Pulled up so it doesn't touch the grass below */
+  margin-bottom: 2rem;
+  padding: 2.5rem 4rem; /* More side padding pushes items inwards, bringing them closer */
+  width: 90%; 
+  max-width: 900px; /* Keeping width so the fade has room to breathe */
+  position: relative;
+  z-index: 1;
+}
+
+/* The smooth fading glass background */
+.featuresGrid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1; /* Behind the content */
+  background: rgba(255, 255, 255, 0.25); /* Milkier at the very center for contrast */
+  backdrop-filter: blur(20px);
+  border-radius: 60px;
+  /* This creates the beautiful fade out at the edges so there are no hard borders */
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 85%);
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 85%);
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 0 1.5rem; /* Space within the grid */
+  position: relative;
+}
+
+/* Vertical dividers */
+.featureItem:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.15); /* Soft dark divider */
+}
+
+.featureIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  color: #8b5cf6; /* Original colored icons */
+}
+
+.featureTitle {
+  font-family: var(--font-inter);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1E293B; /* Crisp dark for legibility on glass */
+}
+
+.featureText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.featureDesc {
+  font-size: 0.75rem;
+  color: rgba(30, 41, 59, 0.7); /* Highly legible dark grey */
+  line-height: 1.5;
+}
+
+/* --- Entrance Animations --- */
+
+@keyframes slideDownBlur {
+  0% { opacity: 0; filter: blur(12px); transform: translateY(-30px); }
+  100% { opacity: 1; filter: blur(0px); transform: translateY(0px); }
+}
+
+@keyframes slideUpBlur {
+  0% { opacity: 0; filter: blur(12px); transform: translateY(40px); }
+  100% { opacity: 1; filter: blur(0px); transform: translateY(0px); }
+}
+
+@keyframes slideLeftBlur {
+  0% { opacity: 0; filter: blur(12px); transform: translateX(-50px); }
+  100% { opacity: 1; filter: blur(0px); transform: translateX(0px); }
+}
+
+@keyframes slideRightBlur {
+  0% { opacity: 0; filter: blur(12px); transform: translateX(50px); }
+  100% { opacity: 1; filter: blur(0px); transform: translateX(0px); }
+}
+
+@keyframes scaleUpBlur {
+  0% { opacity: 0; filter: blur(12px); transform: scale(0.85); }
+  100% { opacity: 1; filter: blur(0px); transform: scale(1); }
+}
+
+.animBase {
+  opacity: 0; 
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation-duration: 1.2s;
+}
+
+.animDown { animation-name: slideDownBlur; }
+.animUp { animation-name: slideUpBlur; }
+.animLeft { animation-name: slideLeftBlur; }
+.animRight { animation-name: slideRightBlur; }
+.animScale { animation-name: scaleUpBlur; }
+
+.delay1 { animation-delay: 0.1s; }
+.delay2 { animation-delay: 0.2s; }
+.delay3 { animation-delay: 0.3s; }
+.delay4 { animation-delay: 0.4s; }
+.delay5 { animation-delay: 0.5s; }
+.delay6 { animation-delay: 0.6s; }
