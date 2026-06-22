@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="frontend/public/hero-bg-modern.png" alt="Creator DNA Hero" width="100%" style="border-radius: 12px; margin-bottom: 20px;" />
+  <img src="readmeeeee.png" alt="Creator DNA Hero" width="100%" style="border-radius: 12px; margin-bottom: 20px;" />
   
   <br />
   
