@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     GEMINI_API_KEY: str
 
     # Database
-    DATABASE_URL: str = "sqlite+aiosqlite:///./creator_dna.db"
+    DATABASE_URL: str = "postgresql+asyncpg://postgres:postgres@localhost/creator_dna"
 
     # CORS
     ALLOWED_ORIGINS: list[str] = ["*"]
