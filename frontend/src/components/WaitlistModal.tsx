@@ -46,7 +46,7 @@ export function WaitlistModal({ isOpen, onClose, count }: WaitlistModalProps) {
         if (data.count) {
           setLocalCount(data.count);
         } else {
-          setLocalCount(displayCount + 1);
+          setLocalCount((displayCount || 0) + 1);
         }
       } else {
         setStatus("error");
