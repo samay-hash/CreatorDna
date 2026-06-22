@@ -21,7 +21,7 @@ import { CountdownTimer } from "../components/CountdownTimer";
 export default function Home() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [isWaitlistOpen, setWaitlistOpen] = useState(false);
-  const [waitlistCount, setWaitlistCount] = useState(0);
+  const [waitlistCount, setWaitlistCount] = useState<number | null>(null);
 
   // Fetch count on mount
   useEffect(() => {

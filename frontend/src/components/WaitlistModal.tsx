@@ -8,7 +8,7 @@ import styles from "../app/landing.module.css";
 interface WaitlistModalProps {
   isOpen: boolean;
   onClose: () => void;
-  count: number;
+  count: number | null;
 }
 
 export function WaitlistModal({ isOpen, onClose, count }: WaitlistModalProps) {
@@ -88,7 +88,13 @@ export function WaitlistModal({ isOpen, onClose, count }: WaitlistModalProps) {
                 <Image src="https://i.pravatar.cc/100?img=12" alt="User 3" width={24} height={24} className={styles.avatarMini} />
               </div>
               <div className={styles.modalCountText}>
-                <span className={styles.countNumber}>{displayCount.toLocaleString()}</span> creators already joined
+                {displayCount === null ? (
+                  <span style={{ opacity: 0.6 }}>Loading count...</span>
+                ) : (
+                  <>
+                    <span className={styles.countNumber}>{displayCount.toLocaleString()}</span> creators already joined
+                  </>
+                )}
               </div>
             </div>
 
